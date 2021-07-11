@@ -1,6 +1,8 @@
 package homework.lesson_3.controller;
 
-import homework.lesson_3.View;
+import homework.lesson_3.exception.LoginExistException;
+import homework.lesson_3.model.NotebookEnum;
+import homework.lesson_3.view.View;
 
 import java.util.Scanner;
 
@@ -16,6 +18,7 @@ public class Notebook implements Regexes {
         this.view = view;
     }
 
+
     public void inputNote() {
         UtilityController utilityController = new UtilityController(scanner, view);
         String value = (String.valueOf(View.bundle.getLocale()).equals("ua"))
@@ -23,5 +26,13 @@ public class Notebook implements Regexes {
         this.name = utilityController.inputChecker(View.NAME_INPUT, value);
         this.login = utilityController.inputChecker(View.LOGIN_INPUT, REGEX_LOGIN);
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLogin() {
+        return login;
     }
 }

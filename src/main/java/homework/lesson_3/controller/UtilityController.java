@@ -1,6 +1,6 @@
 package homework.lesson_3.controller;
 
-import homework.lesson_3.View;
+import homework.lesson_3.view.View;
 
 import java.util.Scanner;
 

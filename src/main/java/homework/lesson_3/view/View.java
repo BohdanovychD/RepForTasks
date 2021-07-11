@@ -1,4 +1,4 @@
-package homework.lesson_3;
+package homework.lesson_3.view;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
